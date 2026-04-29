@@ -2,7 +2,10 @@ import { useNavigation } from '@react-navigation/native'
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { StyleSheet, View } from 'react-native'
 
-import { PRODUCT_ROUTES, type ProductsStackParamList } from '@/app/router/routes'
+import {
+	PRODUCT_ROUTES,
+	type ProductsStackParamList,
+} from '@/shared/routes'
 import { Button, PageTitle } from '@/shared/ui'
 
 export function ProductsScreen() {
@@ -15,7 +18,9 @@ export function ProductsScreen() {
 			<Button
 				title='Открыть продукт #42'
 				onPress={() => {
-					navigation.navigate(PRODUCT_ROUTES.productDetails, { productId: '42' })
+					navigation.navigate(PRODUCT_ROUTES.productDetails, {
+						productId: '42',
+					})
 				}}
 			/>
 			<Button

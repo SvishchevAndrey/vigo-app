@@ -1,9 +1,9 @@
-import { memo } from 'react'
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs'
+import { memo } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-import { colors } from '../../shared/config/theme'
+import { colors } from '@/shared/config/theme'
 
 function BottomNavigationComponent({
 	state,
@@ -23,7 +23,7 @@ function BottomNavigationComponent({
 				const label =
 					typeof descriptor.options.tabBarLabel === 'string'
 						? descriptor.options.tabBarLabel
-						: descriptor.options.title ?? route.name
+						: (descriptor.options.title ?? route.name)
 
 				const onPress = () => {
 					const event = navigation.emit({
@@ -53,7 +53,9 @@ function BottomNavigationComponent({
 						onPress={onPress}
 						style={styles.button}
 					>
-						<Text style={[styles.label, isFocused && styles.activeLabel]}>{label}</Text>
+						<Text style={[styles.label, isFocused && styles.activeLabel]}>
+							{label}
+						</Text>
 					</Pressable>
 				)
 			})}

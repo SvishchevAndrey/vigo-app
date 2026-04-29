@@ -1,1 +1,1 @@
-export { ProductsScreen } from './ui/products-screen';
+export { ProductsScreen } from './ui/products-screen'

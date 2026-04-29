@@ -1,4 +1,4 @@
-import { PageTitle } from '../../../shared/ui/PageTitle';
+import { PageTitle } from '../../../shared/ui/page-title';
 
 export function SettingsScreen() {
   return <PageTitle title="Настройки" />;
