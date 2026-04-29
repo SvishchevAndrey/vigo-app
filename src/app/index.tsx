@@ -5,6 +5,7 @@ import { StyleSheet, View } from 'react-native'
 import { colors } from '@/shared/config/theme'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import { AppLayout } from './layout/app-layout'
+import { UpdateNotifier } from './update'
 
 export function App() {
 	return (
@@ -18,6 +19,7 @@ export function App() {
 							translucent={false}
 						/>
 						<AppLayout />
+						<UpdateNotifier />
 					</View>
 				</SafeAreaView>
 			</NavigationContainer>
