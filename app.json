@@ -17,7 +17,9 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.svishev.andrey.vigotrade",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "Приложению нужен доступ к камере, чтобы фотографировать товары.",
+        "NSPhotoLibraryUsageDescription": "Приложению нужен доступ к фото, чтобы добавлять изображения товаров."
       }
     },
     "android": {
@@ -27,7 +29,10 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.svishev.andrey.vigotrade"
+      "package": "com.svishev.andrey.vigotrade",
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
