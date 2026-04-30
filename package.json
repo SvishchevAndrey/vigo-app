@@ -1,44 +1,47 @@
 {
-  "name": "vigo-trade",
-  "version": "1.0.0",
-  "main": "index.ts",
-  "scripts": {
-    "start": "expo start",
-    "start:go": "expo start --go",
-    "start:dev": "expo start --dev-client",
-    "android": "expo start --android",
-    "android:go": "expo start --android --go",
-    "android:dev": "expo start --android",
-    "ios": "expo start --ios",
-    "ios:go": "expo start --ios --go",
-    "ios:dev": "expo start --ios --dev-client",
-    "build:dev:android": "eas build --profile development --platform android",
-    "build:apk:android": "eas build --profile preview-apk --platform android",
-    "build:dev:ios": "eas build --profile development --platform ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "@react-navigation/bottom-tabs": "^7.15.9",
-    "@react-navigation/native": "^7.2.2",
-    "@react-navigation/native-stack": "^7.14.11",
-    "expo": "~54.0.33",
-    "expo-camera": "~17.0.10",
-    "expo-dev-client": "~6.0.20",
-    "expo-image-picker": "~17.0.11",
-    "expo-status-bar": "~3.0.9",
-    "expo-updates": "~29.0.16",
-    "react": "19.1.0",
-    "react-hook-form": "^7.73.1",
-    "react-native": "0.81.5",
-    "react-native-gesture-handler": "~2.28.0",
-    "react-native-safe-area-context": "^5.7.0",
-    "react-native-screens": "~4.16.0"
-  },
-  "devDependencies": {
-    "@types/react": "~19.1.0",
-    "eas-cli": "^18.8.1",
-    "expo-doctor": "^1.18.19",
-    "typescript": "~5.9.2"
-  },
-  "private": true
+	"name": "vigo-trade",
+	"version": "1.0.0",
+	"main": "index.ts",
+	"scripts": {
+		"dev": "expo start --dev-client",
+		"dev:go": "expo start --go",
+		"dev:android": "expo start --android --dev-client",
+		"dev:ios": "expo start --ios --dev-client",
+		"build:dev-client:android": "eas build --platform android --profile development",
+		"build:dev-client:ios": "eas build --platform ios --profile development",
+		"build:local:dev-client:android": "sh -c 'export JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\" && export ANDROID_HOME=\"$HOME/Library/Android/sdk\" && export ANDROID_SDK_ROOT=\"$ANDROID_HOME\" && export PATH=\"$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH\" && eas build --platform android --profile development --local'",
+		"build:local:android": "sh -c 'export JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\" && export ANDROID_HOME=\"$HOME/Library/Android/sdk\" && export ANDROID_SDK_ROOT=\"$ANDROID_HOME\" && export PATH=\"$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH\" && eas build --platform android --profile production-apk --local'",
+		"build:android": "eas build --platform android --profile production",
+		"build:ios": "eas build --platform ios --profile production"
+	},
+	"volta": {
+		"node": "20.19.4"
+	},
+	"engines": {
+		"node": ">=20.19.4 <21"
+	},
+	"dependencies": {
+		"@react-navigation/bottom-tabs": "^7.15.9",
+		"@react-navigation/native": "^7.2.2",
+		"@react-navigation/native-stack": "^7.14.11",
+		"expo": "~54.0.34",
+		"expo-camera": "~17.0.10",
+		"expo-dev-client": "~6.0.21",
+		"expo-image-picker": "~17.0.11",
+		"expo-status-bar": "~3.0.9",
+		"expo-system-ui": "~6.0.8",
+		"expo-updates": "~29.0.17",
+		"react": "19.1.0",
+		"react-hook-form": "^7.73.1",
+		"react-native": "0.81.5",
+		"react-native-gesture-handler": "~2.28.0",
+		"react-native-safe-area-context": "~5.6.0",
+		"react-native-screens": "~4.16.0"
+	},
+	"devDependencies": {
+		"@types/react": "~19.1.0",
+		"expo-doctor": "^1.18.19",
+		"typescript": "~5.9.2"
+	},
+	"private": true
 }

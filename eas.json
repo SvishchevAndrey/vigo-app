@@ -5,25 +5,56 @@
   },
   "build": {
     "development": {
+      "node": "20.19.4",
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "NODE_ENV": "development"
+      }
     },
     "preview-apk": {
+      "node": "20.19.4",
       "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "channel": "preview-apk",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "production-apk": {
+      "node": "20.19.4",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "channel": "production",
+      "env": {
+        "NODE_ENV": "production"
       }
     },
     "preview": {
+      "node": "20.19.4",
       "android": {
         "distribution": "internal"
       },
       "ios": {
         "distribution": "internal"
+      },
+      "channel": "preview",
+      "env": {
+        "NODE_ENV": "production"
       }
     },
     "production": {
-      "autoIncrement": true
+      "node": "20.19.4",
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "NODE_ENV": "production"
+      }
     }
   },
   "submit": {
